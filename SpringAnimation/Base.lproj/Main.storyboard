@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpringAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DmS-et-lFw" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="67.5" y="70" width="240" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="animation name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0MK-BH-mlH">
+                                        <rect key="frame" x="55" y="54" width="130" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="I9V-bS-ug8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="0MK-BH-mlH" firstAttribute="centerY" secondItem="DmS-et-lFw" secondAttribute="centerY" id="TJh-Xt-Zzy"/>
+                                    <constraint firstItem="0MK-BH-mlH" firstAttribute="centerX" secondItem="DmS-et-lFw" secondAttribute="centerX" id="TZ1-cT-Bye"/>
+                                    <constraint firstAttribute="width" secondItem="DmS-et-lFw" secondAttribute="height" multiplier="15:8" id="TsK-TK-r4l"/>
+                                    <constraint firstAttribute="width" constant="240" id="U3P-0l-ype"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="xRV-MP-dWa"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="AFy-hG-u2w">
+                                <rect key="frame" x="66.5" y="468" width="242" height="72.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="animations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="inB-Wh-nMF">
+                                        <rect key="frame" x="0.0" y="0.0" width="83" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jb2-fs-oq3" customClass="SpringButton" customModule="Spring">
+                                        <rect key="frame" x="0.0" y="36.5" width="240" height="36"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="bqI-aR-Mab"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Animate view">
+                                            <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SmP-Mw-d44"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AFy-hG-u2w" secondAttribute="height" multiplier="10:3" id="g4C-1g-dtG"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AFy-hG-u2w" secondAttribute="bottom" constant="126.5" id="EOn-iw-WY1"/>
+                            <constraint firstItem="DmS-et-lFw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SN8-gw-7BZ"/>
+                            <constraint firstItem="AFy-hG-u2w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66.5" id="vFS-w7-y0g"/>
+                            <constraint firstItem="DmS-et-lFw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="veu-MY-It6"/>
+                            <constraint firstItem="AFy-hG-u2w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xJ2-KL-bgH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="animationButton" destination="Jb2-fs-oq3" id="VYy-A9-pkb"/>
+                        <outlet property="animationCounterLabel" destination="inB-Wh-nMF" id="Hps-ew-zI7"/>
+                        <outlet property="animationLabel" destination="0MK-BH-mlH" id="f15-eY-Bk0"/>
+                        <outlet property="animationView" destination="DmS-et-lFw" id="NE7-k5-hbh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="126.38680659670166"/>
+        </scene>
+    </scenes>
+</document>
